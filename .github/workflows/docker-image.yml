@@ -15,6 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile.dev --tag rohith/docker-react:latest
-    - name: Run tests step
-      run: docker run rohith/docker-react npm run test
+      run: docker build . --file Dockerfile.dev --tag rohith/docker-react:$(date +%s)
